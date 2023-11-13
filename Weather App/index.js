@@ -1,5 +1,3 @@
-// weather.js
-
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.container');
     const search = document.querySelector('.search-box button');
@@ -14,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (city === '')
             return;
 
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APIKey}`)
             .then(response => response.json())
             .then(json => {
                 if (json.cod === '404') {
@@ -64,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 image.src = '';
         }
 
-        temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
+        temperature.innerHTML = `${parseInt(json.main.temp)}<span>°F</span>`;
         description.innerHTML = `${json.weather[0].description}`;
         humidity.innerHTML = `${json.main.humidity}%`;
         wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
