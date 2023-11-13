@@ -192,3 +192,9 @@ body{
     font-weight: 700;
     color: #06283D;
 }
+.container {
+    position: relative;
+    width: 400px;
+    margin: auto;
+    /* Other styles... */
+}
