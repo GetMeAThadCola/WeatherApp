@@ -26,8 +26,13 @@ body {
 .title h1 {
     font-size: 28px;
     font-weight: 700;
-    color:white;
+    color: white;
     font-family: 'Poppins', sans-serif;
+    text-shadow:
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
 }
 
 .container {
