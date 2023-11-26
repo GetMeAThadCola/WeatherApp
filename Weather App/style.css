@@ -7,14 +7,16 @@
 }
 
 body {
+    /* Your existing styles */
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: grey;
+    background: url('sky.jpg') center/cover no-repeat; /* Update the path accordingly */
     font-family: 'Roboto', sans-serif;
 }
+
 
 .title {
     text-align: center;
@@ -69,7 +71,7 @@ body {
     width: 50px;
     height: 50px;
     color: grey;
-    background: darkmagenta;
+    background: skyblue;
     border-radius: 50%;
     font-size: 22px;
     transition: 0.4s ease;
@@ -143,7 +145,7 @@ body {
 }
 
 .weather-details i {
-    color: darkmagenta;
+    color: skyblue;
     font-size: 26px;
     margin-right: 10px;
     margin-top: 6px;
