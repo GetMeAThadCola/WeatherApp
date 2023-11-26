@@ -14,7 +14,6 @@ body {
     justify-content: center;
     background: #06283D;
     font-family: 'Roboto', sans-serif;
-    color: #ffffff;
 }
 
 .title {
@@ -25,6 +24,7 @@ body {
 .title h1 {
     font-size: 28px;
     font-weight: 700;
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -38,15 +38,14 @@ body {
     border-radius: 18px;
     font-family: 'Roboto', sans-serif;
     transition: 0.6s ease-out;
-    color: #06283D;
 }
 
 .search-box {
     width: 100%;
+    height: min-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
 .search-box input {
@@ -55,9 +54,7 @@ body {
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
-    padding: 12px;
-    border: 2px solid #06283D;
-    border-radius: 5px;
+    padding-left: 32px;
 }
 
 .search-box input::placeholder {
@@ -76,7 +73,6 @@ body {
     border-radius: 50%;
     font-size: 22px;
     transition: 0.4s ease;
-    border: none;
 }
 
 .search-box button:hover {
@@ -92,7 +88,6 @@ body {
 
 .weather-box {
     text-align: center;
-    margin-top: 20px;
 }
 
 .weather-box img {
@@ -101,13 +96,16 @@ body {
 }
 
 .weather-box .temperature {
+    position: relative;
     color: #06283D;
     font-size: 4rem;
     font-weight: 800;
     margin-top: 30px;
+    margin-left: -16px;
 }
 
 .weather-box .temperature span {
+    position: absolute;
     margin-left: 4px;
     font-size: 1.5rem;
 }
@@ -117,13 +115,13 @@ body {
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
-    margin-bottom: 20px;
 }
 
 .weather-details {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
 
 .weather-details .humidity,
@@ -131,13 +129,16 @@ body {
     display: flex;
     align-items: center;
     width: 50%;
+    height: 100px;
 }
 
 .weather-details .humidity {
+    padding-left: 20px;
     justify-content: flex-start;
 }
 
 .weather-details .wind {
+    padding-right: 20px;
     justify-content: flex-end;
 }
 
@@ -145,6 +146,7 @@ body {
     color: #06283D;
     font-size: 26px;
     margin-right: 10px;
+    margin-top: 6px;
 }
 
 .weather-details span {
@@ -163,6 +165,8 @@ body {
     width: 100%;
     text-align: center;
     margin-top: 50px;
+    scale: 0;
+    opacity: 0;
     display: none;
 }
 
@@ -179,5 +183,18 @@ body {
 
 .weather-box,
 .weather-details {
-    display: block;
+    scale: 0;
+    opacity: 0;
+}
+
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
 }
